@@ -3,6 +3,6 @@
     public enum DirectionTypeName
     {
         Standart,
-        Deepened
+        Deepened,
     }
 }
