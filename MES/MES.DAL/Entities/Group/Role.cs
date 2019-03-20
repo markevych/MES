@@ -1,8 +1,8 @@
-﻿namespace MES.DAL.Entities
+﻿namespace MES.DAL.Entities.Group
 {
     using System;
 
-    public class Program
+    public class Role
     {
         public Guid Id { get; set; }
 

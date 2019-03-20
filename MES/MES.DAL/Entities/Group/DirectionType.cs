@@ -1,4 +1,4 @@
-﻿namespace MES.DAL.Entities
+﻿namespace MES.DAL.Entities.Group
 {
     using System;
     using MES.DAL.Enumerations;
