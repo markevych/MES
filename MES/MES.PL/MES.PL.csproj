@@ -24,4 +24,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MES.DAL\MES.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

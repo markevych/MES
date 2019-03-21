@@ -7,5 +7,9 @@
         public Guid Id { get; set; }
 
         public string Name { get; set; }
+
+        public Guid TopicId { get; set; }
+
+        public Topic Topic { get; set; }
     }
 }

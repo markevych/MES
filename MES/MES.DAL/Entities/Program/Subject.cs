@@ -1,6 +1,7 @@
 ﻿namespace MES.DAL.Entities.Program
 {
     using System;
+    using System.Collections.Generic;
 
     public class Subject
     {
@@ -9,5 +10,7 @@
         public string Name { get; set; }
 
         public int HoursQuantity { get; set; }
+
+        public ICollection<Topic> Topics { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace MES.DAL.Entities.Program
 {
     using System;
+    using System.Collections.Generic;
 
     public class Topic
     {
@@ -17,5 +18,7 @@
         public Guid SubjectId { get; set; }
 
         public Subject Subject { get; set; }
+
+        public ICollection<Chapter> Chapters { get; set; }
     }
 }
