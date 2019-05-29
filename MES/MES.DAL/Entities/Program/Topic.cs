@@ -20,5 +20,7 @@
         public Subject Subject { get; set; }
 
         public ICollection<Chapter> Chapters { get; set; }
+
+        public ICollection<Skill> Skills { get; set; }
     }
 }
