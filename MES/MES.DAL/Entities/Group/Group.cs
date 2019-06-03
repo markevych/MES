@@ -9,6 +9,10 @@
 
         public int Grade { get; set; }
 
+        public Guid DirectionId { get; set; }
+
+        public Direction Direction { get; set; }
+
         public ICollection<Student> Students { get; set; }
     }
 }

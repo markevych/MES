@@ -1,11 +1,14 @@
 ﻿namespace MES.DAL.Entities.Group
 {
     using System;
+    using System.Collections.Generic;
 
     public class Role
     {
         public Guid Id { get; set; }
 
         public string Name { get; set; }
+
+        public ICollection<User> Users { get; set; }
     }
 }
