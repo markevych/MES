@@ -1,12 +1,20 @@
 ﻿namespace MES.PL.Controllers
 {
     using System.Collections.Generic;
+    using MES.BLL.Interfaces;
     using Microsoft.AspNetCore.Mvc;
 
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IProgramService programService;
+
+        public ValuesController(IProgramService programService)
+        {
+            this.programService = programService;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

@@ -1,6 +1,10 @@
 ﻿namespace MES.PL
 {
+    using MES.BLL.Interfaces;
+    using MES.BLL.Services;
     using MES.DAL.Context;
+    using MES.DAL.Interfaces;
+    using MES.DAL.Repositories;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
@@ -17,14 +21,17 @@
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<MESContext>(options => options.UseSqlServer(this.Configuration.GetValue<string>("ConnectionString")));
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<DbContext, MESContext>();
+
+            services.AddTransient<IProgramService, ProgramService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
