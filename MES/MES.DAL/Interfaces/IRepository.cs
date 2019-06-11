@@ -8,7 +8,7 @@
     {
         void Create(TEntity item);
 
-        TEntity FindById(int id);
+        TEntity FindById(Guid id);
 
         IEnumerable<TEntity> Get();
 

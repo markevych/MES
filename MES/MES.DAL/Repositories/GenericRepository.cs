@@ -30,7 +30,7 @@
             return this.dbSet.AsNoTracking().Where(predicate).ToList();
         }
 
-        public TEntity FindById(int id)
+        public TEntity FindById(Guid id)
         {
             return this.dbSet.Find(id);
         }

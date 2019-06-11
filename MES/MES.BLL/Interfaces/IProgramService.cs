@@ -1,11 +1,20 @@
-﻿using System;
+﻿using MES.BLL.Models.DataTransfer;
+using MES.DAL.Entities.Program;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MES.BLL.Interfaces
 {
     public interface IProgramService
     {
-        string CreateProgram();
+        void CreateProgram(ProgramDto program);
+
+        void UpdateProgram(ProgramDto program);
+
+        void RemoveProgram(Guid programId);
+
+        List<Program> GetPrograms();
+
+        Program GetProgram(Guid programId);
     }
 }

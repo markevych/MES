@@ -12,5 +12,9 @@
         public int HoursQuantity { get; set; }
 
         public ICollection<Topic> Topics { get; set; }
+
+        public Guid ProgramId { get; set; }
+
+        public Program Program { get; set; }
     }
 }

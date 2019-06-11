@@ -1,0 +1,29 @@
+<mat-card class="programs-card">
+  <mat-card-header>
+    <h3 mat-subheader>List of available programs : </h3>
+  </mat-card-header>
+  <mat-card-content>
+  <mat-list>
+    <mat-list-item *ngFor="let program of programs">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line routerLink="{{program.id}}">{{program.name}}</h4>      
+     <button mat-icon-button (click)="deleteProgram(program.id)">
+        <mat-icon color="warn">delete</mat-icon>
+     </button>
+    </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="programs-card">
+  <mat-card-header>
+    <h3 mat-subheader>Create new program : </h3>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field class="example-full-width">
+      <input matInput #message maxlength="256" placeholder="Program name" [(ngModel)]="newProgramName">
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>     
+    <button mat-raised-button (click)="createProgram()">Submit</button>
+  </mat-card-content>
+</mat-card>

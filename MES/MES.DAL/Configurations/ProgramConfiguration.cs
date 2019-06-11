@@ -1,6 +1,6 @@
 ﻿namespace MES.DAL.Configurations
 {
-    using MES.DAL.Entities.Group;
+    using MES.DAL.Entities.Program;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
